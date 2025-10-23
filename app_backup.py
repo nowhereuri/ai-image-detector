@@ -21,7 +21,7 @@ import threading
 import time
 from pathlib import Path
 from datetime import timedelta
-# from model_retrain import ModelRetrainer
+from model_retrain import ModelRetrainer
 
 # Flask 앱 초기화
 app = Flask(__name__)
