@@ -6,3 +6,17 @@ torchvision>=0.21.0
 transformers>=4.45.0
 Pillow>=9.0.0
 numpy>=1.21.0
+
+pandas
+scikit-learn
+matplotlib
+
+# 불균형 데이터 처리
+imbalanced-learn
+
+# 진행률 표시
+tqdm
+
+# 유틸리티
+python-dotenv
+
