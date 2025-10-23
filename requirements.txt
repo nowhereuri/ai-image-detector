@@ -1,6 +1,15 @@
 # AI 이미지 분류기 웹 애플리케이션 - Render.com 배포용
+Flask==2.3.3
+gunicorn==21.2.0
+torch>=2.5.0
+torchvision>=0.21.0
+transformers>=4.45.0
+Pillow>=9.0.0
+numpy>=1.21.0
+
 
 # 웹 프레임워크
+***
 Flask==2.3.3
 Werkzeug==2.3.7
 gunicorn==21.2.0
@@ -30,3 +39,4 @@ tqdm>=4.65.0
 
 # 유틸리티
 python-dotenv>=1.0.0
+***
