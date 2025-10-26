@@ -508,13 +508,14 @@ def get_feedback_stats():
 if __name__ == '__main__':
     print("AI 이미지 분류 웹사이트 시작 중...")
     
-    # Heroku 배포를 위한 포트 설정
+    # Render 배포를 위한 포트 설정
     port = int(os.environ.get('PORT', 8080))
     debug_mode = os.environ.get('FLASK_ENV') != 'production'
     
+    # Render.com에서는 host를 0.0.0.0으로 바인딩해야 함
     if debug_mode:
-        print("브라우저에서 http://localhost:8080 으로 접속하세요!")
-        app.run(debug=True, host='127.0.0.1', port=port)
+        print("로컬 개발 모드: 브라우저에서 http://localhost:8080 으로 접속하세요!")
+        app.run(debug=True, host='0.0.0.0', port=port)
     else:
-        print(f"Heroku에서 포트 {port}로 실행 중...")
+        print(f"프로덕션 모드: 포트 {port}로 실행 중...")
         app.run(debug=False, host='0.0.0.0', port=port)
